@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiTasking</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Panel de Login -->
+    <div id="login-panel" class="panel active">
+        <div class="login-container">
+            <div class="image-placeholder"></div>
+            <div class="login-content">
+                <h1>Bienvenida a MultiTasking</h1>
+                <h2>Iniciar Sesión</h2>
+                <form class="login-form">
+                    <div class="input-group">
+                        <label for="username">Usuario o Correo:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="button-group">
+                        <button class="button secondary" type="button" onclick="showMainPanel()">Probar Beta</button>
+                        <button class="button" type="submit" onclick="login(event)">Iniciar</button>
+                    </div>
+                    <div class="link-group">
+                        <a href="#">Crear Cuenta</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a href="https://github.com/jimejuarezv" target="_blank" class="github-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+        </a>
+    </div>
+
+    <!-- Panel Principal -->
+    <div id="main-panel" class="panel hidden">
+        <header>
+            <h1>MultiTasking</h1>
+        </header>
+        <div id="task-banner" class="banner">
+            <button id="add-task-button" class="button">+</button>
+        </div>
+        <div id="task-form" class="hidden">
+            <h3>Crear Nueva Tarea</h3>
+            <form id="new-task-form">
+                <div class="input-group">
+                    <label for="task-title">Título de la Tarea:</label>
+                    <input type="text" id="task-title" required>
+                </div>
+                <div class="input-group">
+                    <label for="task-description">Asignar a :</label>
+                    <textarea id="task-description" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="task-deadline">Fecha Límite:</label>
+                    <input type="date" id="task-deadline" required>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="button">Crear</button>
+                </div>
+            </form>
+        </div>
+        <div id="task-list">
+            <h2>Mis Tareas</h2>
+            <ul id="tasks"></ul>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
